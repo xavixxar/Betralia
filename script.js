@@ -28,6 +28,11 @@ const languages = [
         id: "english",
         name: "English"
     },
+
+     {
+        id: "menorqui",
+        name: "Menorquí"
+    },
 ];
 
 
@@ -45,6 +50,7 @@ const stories = [
         languageName: "Spanish",
         flag: "🇳🇴",
         level: "A1",
+        creator: "Xavier T.",
         image: "",
         link: "Historias/ElViajeDeAnna.html",
         popularity: 100,
@@ -60,6 +66,7 @@ const stories = [
         languageName: "Catalan",
         flag: "🇳🇴",
         level: "A1",
+        creator: "Xavier T.",
         image: "",
         link: "Historias/ElViajeDeAnna.html",
         popularity: 100,
@@ -76,12 +83,30 @@ const stories = [
         language: "italian",
         languageName: "Italian",
         level: "A1",
+        creator: "Xavier T.",
         image: "",
         link: "Historias/Il viaggio d'Anna.html",
         popularity: 75,
         date: 1,
         rating: 4.7
-    }
+    },
+
+    // --------------------------
+    // MENORQUI
+    // --------------------------
+    {
+        title: "The boys and the scarecrow - Els al·lots i el bojot",
+        language: "menorqui",
+        languageName: "Menorquí",
+        flag: "🇳🇴",
+        level: "C1",
+        creator: "Toni.",
+        image: "",
+        link: "Historias/Els al·lots i el bojot.html",
+        popularity: 100,
+        date: 5,
+        rating: 4.9
+    },
 
 ];
 
@@ -228,7 +253,8 @@ function createStoryCard(story) {
 
 
     information.textContent =
-        `${story.languageName} · ${story.level}`;
+        `${story.languageName} · ${story.level} · ${story.creator}`;
+
 
 
     card.appendChild(image);
@@ -466,4 +492,3 @@ sort.addEventListener(
 populateLanguages();
 
 displayStories();
-
