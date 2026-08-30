@@ -1,4 +1,3 @@
-
 // ==========================================
 // IDIOMAS
 // ==========================================
@@ -6,39 +5,33 @@
 const languages = [
 
     {
-        id: "noruego",
-        name: "Noruego",
-        flag: "🇳🇴"
+        id: "german",
+        name: "German"
     },
 
     {
-        id: "aleman",
-        name: "Alemán",
-        flag: "🇩🇪"
+        id: "spanish",
+        name: "Spanish"
     },
 
     {
-        id: "neerlandes",
-        name: "Neerlandés",
-        flag: "🇳🇱"
+        id: "french",
+        name: "French"
     },
 
     {
-        id: "frances",
-        name: "Francés",
-        flag: "🇫🇷"
+        id: "italian",
+        name: "Italian"
     },
 
     {
-        id: "italiano",
-        name: "Italiano",
-        flag: "🇮🇹"
+        id: "dutch",
+        name: "Dutch"
     },
 
     {
-        id: "espanol",
-        name: "Español",
-        flag: "🇪🇸"
+        id: "norwegian",
+        name: "Norwegian"
     }
 
 ];
@@ -55,12 +48,12 @@ const stories = [
     // --------------------------
 
     {
-        title: "El viaje de Anna",
-        language: "noruego",
-        languageName: "Noruego",
+        title: "Anna's travel",
+        language: "norwegian",
+        languageName: "Norwegian",
         flag: "🇳🇴",
         level: "A1",
-        image: "",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
         link: "historias/ElViajeDeAnna.html",
         popularity: 100,
         date: 5,
@@ -68,26 +61,26 @@ const stories = [
     },
 
     {
-        title: "Un día en Oslo",
-        language: "noruego",
-        languageName: "Noruego",
+        title: "A day in Oslo",
+        language: "norwegian",
+        languageName: "Norwegian",
         flag: "🇳🇴",
         level: "A2",
-        image: "",
-        link: "#",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        link: "historias/ElViajeDeAnna.html",
         popularity: 80,
         date: 4,
         rating: 4.8
     },
 
     {
-        title: "El gato negro",
-        language: "noruego",
-        languageName: "Noruego",
+        title: "The black cat",
+        language: "norwegian",
+        languageName: "Norwegian",
         flag: "🇳🇴",
         level: "A2",
-        image: "",
-        link: "#",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        link: "historias/ElViajeDeAnna.html",
         popularity: 60,
         date: 3,
         rating: 4.7
@@ -99,26 +92,26 @@ const stories = [
     // --------------------------
 
     {
-        title: "La pequeña casa",
-        language: "aleman",
-        languageName: "Alemán",
+        title: "The small house",
+        language: "german",
+        languageName: "German",
         flag: "🇩🇪",
         level: "A1",
-        image: "",
-        link: "#",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        link: "historias/ElViajeDeAnna.html",
         popularity: 90,
         date: 6,
         rating: 4.9
     },
 
     {
-        title: "Un paseo por Berlín",
-        language: "aleman",
-        languageName: "Alemán",
+        title: "A walk through Berlin",
+        language: "german",
+        languageName: "German",
         flag: "🇩🇪",
         level: "A2",
-        image: "",
-        link: "#",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        link: "historias/ElViajeDeAnna.html",
         popularity: 70,
         date: 2,
         rating: 4.6
@@ -130,13 +123,13 @@ const stories = [
     // --------------------------
 
     {
-        title: "Una mañana en Amsterdam",
-        language: "neerlandes",
-        languageName: "Neerlandés",
+        title: "A morning in Amsterdam",
+        language: "dutch",
+        languageName: "Dutch",
         flag: "🇳🇱",
         level: "A1",
-        image: "",
-        link: "#",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        link: "historias/ElViajeDeAnna.html",
         popularity: 95,
         date: 7,
         rating: 4.9
@@ -148,13 +141,13 @@ const stories = [
     // --------------------------
 
     {
-        title: "El café de París",
-        language: "frances",
-        languageName: "Francés",
+        title: "The coffee of Paris",
+        language: "french",
+        languageName: "French",
         flag: "🇫🇷",
         level: "A1",
         image: "",
-        link: "#",
+        link: "historias/ElViajeDeAnna.html",
         popularity: 88,
         date: 8,
         rating: 4.8
@@ -166,13 +159,12 @@ const stories = [
     // --------------------------
 
     {
-        title: "Una tarde en Roma",
-        language: "italiano",
-        languageName: "Italiano",
-        flag: "🇮🇹",
+        title: "Anna's Travel - Il viaggio d'Anna.",
+        language: "italian",
+        languageName: "Italian",
         level: "A1",
-        image: "",
-        link: "#",
+        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        link: "historias/Il viaggio d'Anna.html",
         popularity: 75,
         date: 1,
         rating: 4.7
@@ -187,9 +179,6 @@ const stories = [
 
 const languageSelector =
     document.getElementById("language");
-
-const languageSearch =
-    document.getElementById("language-search");
 
 const popularStories =
     document.getElementById("popular-stories");
@@ -227,7 +216,7 @@ function populateLanguages(filter = "") {
     allOption.value = "todos";
 
     allOption.textContent =
-        "🌍 Todos los idiomas";
+        "🌍 All languages";
 
     languageSelector.appendChild(allOption);
 
@@ -257,7 +246,7 @@ function populateLanguages(filter = "") {
             language.id;
 
         option.textContent =
-            `${language.flag} ${language.name}`;
+            language.name;
 
         languageSelector.appendChild(option);
 
@@ -326,7 +315,7 @@ function createStoryCard(story) {
 
 
     information.textContent =
-        `${story.flag} ${story.languageName} · ${story.level}`;
+        `${story.languageName} · ${story.level}`;
 
 
     card.appendChild(image);
@@ -530,20 +519,6 @@ if (selectedLanguage === "todos") {
 languageSelector.addEventListener(
     "change",
     displayStories
-);
-
-
-// Buscar idioma
-
-languageSearch.addEventListener(
-    "input",
-    () => {
-
-        populateLanguages(
-            languageSearch.value
-        );
-
-    }
 );
 
 
