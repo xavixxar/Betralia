@@ -67,7 +67,7 @@ const stories = [
         flag: "🇳🇴",
         level: "A2",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 80,
         date: 4,
         rating: 4.8
@@ -80,7 +80,7 @@ const stories = [
         flag: "🇳🇴",
         level: "A2",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 60,
         date: 3,
         rating: 4.7
@@ -98,7 +98,7 @@ const stories = [
         flag: "🇩🇪",
         level: "A1",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 90,
         date: 6,
         rating: 4.9
@@ -111,7 +111,7 @@ const stories = [
         flag: "🇩🇪",
         level: "A2",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 70,
         date: 2,
         rating: 4.6
@@ -129,7 +129,7 @@ const stories = [
         flag: "🇳🇱",
         level: "A1",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 95,
         date: 7,
         rating: 4.9
@@ -147,7 +147,7 @@ const stories = [
         flag: "🇫🇷",
         level: "A1",
         image: "",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 88,
         date: 8,
         rating: 4.8
