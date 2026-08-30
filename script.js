@@ -5,8 +5,8 @@
 const languages = [
 
     {
-        id: "german",
-        name: "German"
+        id: "catalan",
+        name: "Catalan"
     },
 
     {
@@ -15,8 +15,8 @@ const languages = [
     },
 
     {
-        id: "french",
-        name: "French"
+        id: "portuguese",
+        name: "Portuguese"
     },
 
     {
@@ -25,15 +25,9 @@ const languages = [
     },
 
     {
-        id: "dutch",
-        name: "Dutch"
+        id: "english",
+        name: "English"
     },
-
-    {
-        id: "norwegian",
-        name: "Norwegian"
-    }
-
 ];
 
 
@@ -42,117 +36,36 @@ const languages = [
 // ==========================================
 
 const stories = [
-
     // --------------------------
-    // NORUEGO
+    // ESPAÑOL
     // --------------------------
-
     {
-        title: "Anna's travel",
-        language: "norwegian",
-        languageName: "Norwegian",
+        title: "Pepito el grillo",
+        language: "spanish",
+        languageName: "Spanish",
         flag: "🇳🇴",
         level: "A1",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        image: "",
         link: "Historias/ElViajeDeAnna.html",
         popularity: 100,
         date: 5,
         rating: 4.9
     },
-
+    // --------------------------
+    // CATALAN
+    // --------------------------
     {
-        title: "A day in Oslo",
-        language: "norwegian",
-        languageName: "Norwegian",
+        title: "Bruhhh",
+        language: "catalan",
+        languageName: "Catalan",
         flag: "🇳🇴",
-        level: "A2",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
-        popularity: 80,
-        date: 4,
-        rating: 4.8
-    },
-
-    {
-        title: "The black cat",
-        language: "norwegian",
-        languageName: "Norwegian",
-        flag: "🇳🇴",
-        level: "A2",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
-        popularity: 60,
-        date: 3,
-        rating: 4.7
-    },
-
-
-    // --------------------------
-    // ALEMÁN
-    // --------------------------
-
-    {
-        title: "The small house",
-        language: "german",
-        languageName: "German",
-        flag: "🇩🇪",
-        level: "A1",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
-        popularity: 90,
-        date: 6,
-        rating: 4.9
-    },
-
-    {
-        title: "A walk through Berlin",
-        language: "german",
-        languageName: "German",
-        flag: "🇩🇪",
-        level: "A2",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
-        popularity: 70,
-        date: 2,
-        rating: 4.6
-    },
-
-
-    // --------------------------
-    // NEERLANDÉS
-    // --------------------------
-
-    {
-        title: "A morning in Amsterdam",
-        language: "dutch",
-        languageName: "Dutch",
-        flag: "🇳🇱",
-        level: "A1",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
-        popularity: 95,
-        date: 7,
-        rating: 4.9
-    },
-
-
-    // --------------------------
-    // FRANCÉS
-    // --------------------------
-
-    {
-        title: "The coffee of Paris",
-        language: "french",
-        languageName: "French",
-        flag: "🇫🇷",
         level: "A1",
         image: "",
-        link: "historias/ElViajeDeAnna.html",
-        popularity: 88,
-        date: 8,
-        rating: 4.8
+        link: "Historias/ElViajeDeAnna.html",
+        popularity: 100,
+        date: 5,
+        rating: 4.9
     },
-
 
     // --------------------------
     // ITALIANO
@@ -163,7 +76,7 @@ const stories = [
         language: "italian",
         languageName: "Italian",
         level: "A1",
-        image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
+        image: "",
         link: "Historias/Il viaggio d'Anna.html",
         popularity: 75,
         date: 1,
