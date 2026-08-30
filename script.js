@@ -54,7 +54,7 @@ const stories = [
         flag: "🇳🇴",
         level: "A1",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/ElViajeDeAnna.html",
+        link: "Historias/ElViajeDeAnna.html",
         popularity: 100,
         date: 5,
         rating: 4.9
@@ -164,7 +164,7 @@ const stories = [
         languageName: "Italian",
         level: "A1",
         image: "Imagenes/G8uDAw5X0AE3d5Z.jpeg",
-        link: "historias/Il viaggio d'Anna.html",
+        link: "Historias/Il viaggio d'Anna.html",
         popularity: 75,
         date: 1,
         rating: 4.7
@@ -549,6 +549,11 @@ sort.addEventListener(
 // ==========================================
 // INICIAR
 // ==========================================
+
+populateLanguages();
+
+displayStories();
+
 
 populateLanguages();
 
