@@ -554,10 +554,3 @@ populateLanguages();
 
 displayStories();
 
-
-
-populateLanguages();
-
-displayStories();
-
-
