@@ -31,7 +31,20 @@ const languages = [
 
      {
         id: "menorqui",
-        name: "Menorquí"
+        name: "Menorquí (Catalan dialect)"
+    },
+
+     {
+        id: "normand",
+        name: "Normand"
+    },
+     {
+        id: "arpetan",
+        name: "Arpetan"
+    },
+     {
+        id: "alsacian",
+        name: "Alsacian"
     },
 ];
 
@@ -101,13 +114,74 @@ const stories = [
         flag: "🇳🇴",
         level: "C1",
         creator: "Toni.",
-        image: "",
+        image: "Imagenes/historia menorqui 1.png",
         link: "Historias/Els al·lots i el bojot.html",
+        popularity: 100,
+        date: 2,
+        rating: 4.9
+    },
+
+    // --------------------------
+    // NORMAND
+    // --------------------------
+    {
+        title: "Pedro goes to the market (Cauchoise) - Pedro va oû marchi",
+        language: "normand",
+        languageName: "Normand",
+        flag: "🇳🇴",
+        level: "A1",
+        creator: "ed l'Epte a la Mer",
+        image: "",
+        link: "Historias/Pedro in the market Cauchoise.html",
+        popularity: 99,
+        date: 5,
+        rating: 4.8
+    },
+    {
+        title: "Pedro goes to the market (Lechanteur) - Pedro va oû marchi",
+        language: "normand",
+        languageName: "Normand",
+        flag: "🇳🇴",
+        level: "A1",
+        creator: "",
+        image: "",
+        link: "Historias/Pedro in the market Lechanteur.html",
+        popularity: 97,
+        date: 4,
+        rating: 4.7
+    },
+    // --------------------------
+    // Arpetan
+    // --------------------------
+    {
+        title: "Pîer goes to Cessieu - Pîer vat dins la vêla de Cessiae",
+        language: "arpetan",
+        languageName: "Arpetan",
+        flag: "🇳🇴",
+        level: "A1",
+        creator: "Aripa",
+        image: "",
+        link: "Historias/Pedro in the market Cauchoise  .html",
+        popularity: 97,
+        date: 3,
+        rating: 4.7
+    },
+    // --------------------------
+    // ESPAÑOL
+    // --------------------------
+    {
+        title: "Pedro goes to the market",
+        language: "alsacian",
+        languageName: "Alsacian",
+        flag: "🇳🇴",
+        level: "A1",
+        creator: "",
+        image: "",
+        link: "Historias/Pedro in the market Alsacian.html",
         popularity: 100,
         date: 5,
         rating: 4.9
     },
-
 ];
 
 
