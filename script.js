@@ -63,6 +63,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "pepito-el-grillo",
         title: "Pepito el grillo",
         language: "spanish",
         languageName: "Spanish",
@@ -82,6 +83,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "Bruhhh",
         title: "Bruhhh",
         language: "catalan",
         languageName: "Catalan",
@@ -101,6 +103,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "il-viaggio-di-anna",
         title: "Anna's Travel - Il viaggio d'Anna.",
         language: "italian",
         languageName: "Italian",
@@ -120,6 +123,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "els-allots-i-el-bojot",
         title: "The boys and the scarecrow - Els al·lots i el bojot",
         language: "menorqui",
         languageName: "Menorquí",
@@ -139,6 +143,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "pedro-cauchoise",
         title: "Pedro goes to the market (Cauchoise) - Pedro va oû marchi",
         language: "normand",
         languageName: "Normand",
@@ -154,6 +159,7 @@ const stories = [
 
 
     {
+        id: "pedro-lechanteur",
         title: "Pedro goes to the market (Lechanteur) - Pedro va oû marchi",
         language: "normand",
         languageName: "Normand",
@@ -173,6 +179,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "pier-goes-to-cessieu",
         title: "Pîer goes to Cessieu - Pîer vat dins la vêla de Cessiae",
         language: "arpetan",
         languageName: "Arpetan",
@@ -192,6 +199,7 @@ const stories = [
     // --------------------------
 
     {
+        id: "pedro-geht-am-marik",
         title: "Pedro goes to the market - Pedro geht am Märik",
         language: "alsacian",
         languageName: "Alsacian",
