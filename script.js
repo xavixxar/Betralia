@@ -5,18 +5,23 @@
 const languages = [
 
     {
+        id: "alsacian",
+        name: "Alsacian"
+    },
+
+    {
+        id: "arpetan",
+        name: "Arpetan"
+    },
+
+    {
         id: "catalan",
         name: "Catalan"
     },
 
     {
-        id: "spanish",
-        name: "Spanish"
-    },
-
-    {
-        id: "portuguese",
-        name: "Portuguese"
+        id: "english",
+        name: "English"
     },
 
     {
@@ -25,59 +30,43 @@ const languages = [
     },
 
     {
-        id: "english",
-        name: "English"
-    },
-
-     {
         id: "menorqui",
         name: "Menorquí (Catalan dialect)"
     },
 
-     {
+    {
         id: "normand",
         name: "Normand"
     },
-     {
-        id: "arpetan",
-        name: "Arpetan"
+
+    {
+        id: "portuguese",
+        name: "Portuguese"
     },
-     {
-        id: "alsacian",
-        name: "Alsacian"
-    },
+
+    {
+        id: "spanish",
+        name: "Spanish"
+    }
+
 ];
 
 
 // ==========================================
-// HISTORIAS
+// HISTORIAS PAGINA PRINCIPAL
 // ==========================================
 
 const stories = [
+
     // --------------------------
     // ESPAÑOL
     // --------------------------
+
     {
         title: "Pepito el grillo",
         language: "spanish",
         languageName: "Spanish",
-        flag: "🇳🇴",
-        level: "A1",
-        creator: "Xavier T.",
-        image: "",
-        link: "Historias/ElViajeDeAnna.html",
-        popularity: 100,
-        date: 5,
-        rating: 4.9
-    },
-    // --------------------------
-    // CATALAN
-    // --------------------------
-    {
-        title: "Bruhhh",
-        language: "catalan",
-        languageName: "Catalan",
-        flag: "🇳🇴",
+        flag: "🇪🇸",
         level: "A1",
         creator: "Xavier T.",
         image: "",
@@ -87,14 +76,35 @@ const stories = [
         rating: 4.9
     },
 
+
     // --------------------------
-    // ITALIANO
+    // CATALAN
+    // --------------------------
+
+    {
+        title: "Bruhhh",
+        language: "catalan",
+        languageName: "Catalan",
+        flag: "🇦🇩",
+        level: "A1",
+        creator: "Xavier T.",
+        image: "",
+        link: "Historias/ElViajeDeAnna.html",
+        popularity: 100,
+        date: 5,
+        rating: 4.9
+    },
+
+
+    // --------------------------
+    // ITALIAN
     // --------------------------
 
     {
         title: "Anna's Travel - Il viaggio d'Anna.",
         language: "italian",
         languageName: "Italian",
+        flag: "🇮🇹",
         level: "A1",
         creator: "Xavier T.",
         image: "",
@@ -104,14 +114,16 @@ const stories = [
         rating: 4.7
     },
 
+
     // --------------------------
     // MENORQUI
     // --------------------------
+
     {
         title: "The boys and the scarecrow - Els al·lots i el bojot",
         language: "menorqui",
         languageName: "Menorquí",
-        flag: "🇳🇴",
+        flag: "🇪🇸",
         level: "C1",
         creator: "Toni.",
         image: "Imagenes/historia menorqui 1.png",
@@ -121,67 +133,78 @@ const stories = [
         rating: 4.9
     },
 
+
     // --------------------------
     // NORMAND
     // --------------------------
+
     {
         title: "Pedro goes to the market (Cauchoise) - Pedro va oû marchi",
         language: "normand",
         languageName: "Normand",
-        flag: "🇳🇴",
+        flag: "🇫🇷",
         level: "A1",
         creator: "ed l'Epte a la Mer",
-        image: "",
+        image: "Imagenes/historia normando 1.png",
         link: "Historias/Pedro in the market Cauchoise.html",
         popularity: 99,
         date: 5,
         rating: 4.8
     },
+
+
     {
         title: "Pedro goes to the market (Lechanteur) - Pedro va oû marchi",
         language: "normand",
         languageName: "Normand",
-        flag: "🇳🇴",
+        flag: "🇫🇷",
         level: "A1",
         creator: "",
-        image: "",
+        image: "Imagenes/historia normando 1.png",
         link: "Historias/Pedro in the market Lechanteur.html",
         popularity: 97,
         date: 4,
         rating: 4.7
     },
+
+
     // --------------------------
-    // Arpetan
+    // ARPETAN
     // --------------------------
+
     {
         title: "Pîer goes to Cessieu - Pîer vat dins la vêla de Cessiae",
         language: "arpetan",
         languageName: "Arpetan",
-        flag: "🇳🇴",
+        flag: "🇫🇷",
         level: "A1",
         creator: "Aripa",
-        image: "",
+        image: "Imagenes/historia arpitano 1.png",
         link: "Historias/Pedro in the market Cauchoise  .html",
         popularity: 97,
         date: 3,
         rating: 4.7
     },
+
+
     // --------------------------
-    // ESPAÑOL
+    // ALSACIAN
     // --------------------------
+
     {
-        title: "Pedro goes to the market",
+        title: "Pedro goes to the market - Pedro geht am Märik",
         language: "alsacian",
         languageName: "Alsacian",
-        flag: "🇳🇴",
+        flag: "🇫🇷",
         level: "A1",
         creator: "",
-        image: "",
+        image: "Imagenes/historia alsaciano 1.png",
         link: "Historias/Pedro in the market Alsacian.html",
         popularity: 100,
         date: 5,
         rating: 4.9
-    },
+    }
+
 ];
 
 
@@ -215,12 +238,14 @@ const sort =
 // CREAR SELECTOR DE IDIOMAS
 // ==========================================
 
-
-function populateLanguages(filter = "") {
+function populateLanguages() {
 
     languageSelector.innerHTML = "";
 
-    // Opción "Todos los idiomas"
+
+    // --------------------------
+    // TODOS LOS IDIOMAS
+    // --------------------------
 
     const allOption =
         document.createElement("option");
@@ -228,28 +253,26 @@ function populateLanguages(filter = "") {
     allOption.value = "todos";
 
     allOption.textContent =
-        "🌍 All languages";
+        "All languages";
 
     languageSelector.appendChild(allOption);
 
 
-    // Filtrar idiomas
+    // --------------------------
+    // ORDEN ALFABÉTICO
+    // --------------------------
 
-    const filteredLanguages =
-        languages.filter(language =>
-
-            language.name
-                .toLowerCase()
-                .includes(
-                    filter.toLowerCase()
-                )
-
+    const sortedLanguages =
+        [...languages].sort((a, b) =>
+            a.name.localeCompare(b.name)
         );
 
 
-    // Crear opciones
+    // --------------------------
+    // CREAR OPCIONES
+    // --------------------------
 
-    filteredLanguages.forEach(language => {
+    sortedLanguages.forEach(language => {
 
         const option =
             document.createElement("option");
@@ -265,13 +288,65 @@ function populateLanguages(filter = "") {
     });
 
 
-    // "Todos los idiomas" seleccionado al iniciar
+    // Empezar con todos los idiomas
 
-    if (filter === "") {
-        languageSelector.value = "todos";
+    languageSelector.value = "todos";
+
+}
+
+
+// ==========================================
+// ESTADÍSTICAS
+// ==========================================
+
+function updateStats() {
+
+    // Número total de historias
+
+    const storyCount =
+        stories.length;
+
+
+    // Obtener los idiomas que tienen historias
+
+    const languagesWithStories =
+        new Set(
+            stories.map(story => story.language)
+        );
+
+
+    const languageCount =
+        languagesWithStories.size;
+
+
+    // Buscar elementos HTML
+
+    const storyCountElement =
+        document.getElementById("story-count");
+
+    const languageCountElement =
+        document.getElementById("language-count");
+
+
+    // Actualizar números
+
+    if (storyCountElement) {
+
+        storyCountElement.textContent =
+            storyCount;
+
+    }
+
+
+    if (languageCountElement) {
+
+        languageCountElement.textContent =
+            languageCount;
+
     }
 
 }
+
 
 // ==========================================
 // CREAR TARJETA DE HISTORIA
@@ -297,8 +372,9 @@ function createStoryCard(story) {
     image.classList.add("story-image");
 
 
-    // Si existe una imagen,
-    // la mostramos.
+    // --------------------------
+    // IMAGEN
+    // --------------------------
 
     if (story.image !== "") {
 
@@ -314,6 +390,10 @@ function createStoryCard(story) {
     }
 
 
+    // --------------------------
+    // TÍTULO
+    // --------------------------
+
     const title =
         document.createElement("h3");
 
@@ -321,6 +401,10 @@ function createStoryCard(story) {
     title.textContent =
         story.title;
 
+
+    // --------------------------
+    // INFORMACIÓN
+    // --------------------------
 
     const information =
         document.createElement("p");
@@ -330,6 +414,9 @@ function createStoryCard(story) {
         `${story.languageName} · ${story.level} · ${story.creator}`;
 
 
+    // --------------------------
+    // AÑADIR ELEMENTOS
+    // --------------------------
 
     card.appendChild(image);
 
@@ -353,7 +440,9 @@ function displayStories() {
         languageSelector.value;
 
 
-    // Limpiar
+    // --------------------------
+    // LIMPIAR
+    // --------------------------
 
     popularStories.innerHTML = "";
 
@@ -362,22 +451,28 @@ function displayStories() {
     allStories.innerHTML = "";
 
 
-    // Filtrar idioma
+    // --------------------------
+    // FILTRAR IDIOMA
+    // --------------------------
 
-let filteredStories;
+    let filteredStories;
 
-if (selectedLanguage === "todos") {
 
-    filteredStories = [...stories];
+    if (selectedLanguage === "todos") {
 
-} else {
+        filteredStories =
+            [...stories];
 
-    filteredStories =
-        stories.filter(story =>
-            story.language === selectedLanguage
-        );
+    }
 
-}
+    else {
+
+        filteredStories =
+            stories.filter(story =>
+                story.language === selectedLanguage
+            );
+
+    }
 
 
     // ======================================
@@ -385,8 +480,7 @@ if (selectedLanguage === "todos") {
     // ======================================
 
     const searchText =
-        search.value
-            .toLowerCase();
+        search.value.toLowerCase();
 
 
     if (searchText !== "") {
@@ -416,8 +510,7 @@ if (selectedLanguage === "todos") {
         filteredStories =
             filteredStories.filter(story =>
 
-                story.level ===
-                selectedLevel
+                story.level === selectedLevel
 
             );
 
@@ -567,3 +660,4 @@ populateLanguages();
 
 displayStories();
 
+updateStats();

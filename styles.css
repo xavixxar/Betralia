@@ -251,3 +251,14 @@ section {
     }
 }
 
+.language-selector h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.site-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 0;
+}
