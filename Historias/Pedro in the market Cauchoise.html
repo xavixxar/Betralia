@@ -1,147 +1,219 @@
-
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pedro va oû marchi</title>
+<title>Pedro va oû marchi</title>
 
-    <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles.css">
+```
 
 </head>
 
-
 <body>
 
+```
+<main class="story-page">
 
-    <main class="story-page">
 
-        <h1>Pedro va oû marchi</h1>
+    <!-- ============================== -->
+    <!-- TÍTULO -->
+    <!-- ============================== -->
 
-        <p class="story-info">
-            Normand Cauchoise · A1
+    <h1>Pedro va oû marchi</h1>
+
+
+    <p class="story-info">
+        Normand Cauchoise · A1
+    </p>
+
+
+    <hr>
+
+
+    <!-- ============================== -->
+    <!-- ESTADÍSTICAS -->
+    <!-- ============================== -->
+
+    <div class="story-stats">
+
+        <span>
+            👁️ <strong id="views">0</strong>
+        </span>
+
+        <span>
+            ❤️ <strong id="likes">0</strong>
+        </span>
+
+    </div>
+
+
+    <button
+        id="like-button"
+        type="button"
+    >
+        ❤️ Like
+    </button>
+
+
+    <!-- ============================== -->
+    <!-- HISTORIA -->
+    <!-- ============================== -->
+
+    <div class="story-text">
+
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="Pedro goes to the market."
+            >
+                Pedro va o marché.
+            </span>
+
         </p>
 
-        <hr>
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="He wants to buy potatoes, pommes de terre/truques, eggs and onions."
+            >
+                I veut acater des patates, pommes de terre/truques, des œufs et des ognons.
+            </span>
+
+        </p>
 
 
-        <div class="story-text">
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="For tonight's dinner."
+            >
+                Por souper anuit.
+            </span>
+
+        </p>
 
 
-            <p class="sentence">
-
-                <span
-                    class="word"
-                    data-translation="Pedro goes to the market,"
-                >
-                    Pedro va o marché,
-                </span>
-
-            </p>
+    </div>
 
 
-            <p class="sentence">
+    <!-- ============================== -->
+    <!-- VOLVER -->
+    <!-- ============================== -->
 
-                <span
-                    class="word"
-                    data-translation="he wants to buy potatoes, eggs and onions."
-                >
-                    i veut acater des patates, pommes de terre/truques, des œufs et des ognons
-                </span>
-
-            </p>
-
-
-            <p class="sentence">
-
-                <span
-                    class="word"
-                    data-translation="for tonight's dinner."
-                >
-                     por souper anuit
-                </span>
-
-            </p>
+    <a
+        href="../index.html"
+        class="back-button"
+    >
+        ← Return to stories
+    </a>
 
 
-        </div>
+</main>
 
 
-        <a
-            href="../index.html"
-            class="back-button"
-        >
-            ← Return to stories
-        </a>
+<!-- ============================== -->
+<!-- ID DE LA HISTORIA -->
+<!-- ============================== -->
+
+<script>
+
+    const STORY_ID = "pedro-cauchoise";
+
+</script>
 
 
-    </main>
+<!-- ============================== -->
+<!-- SUPABASE -->
+<!-- ============================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../supabase.js"></script>
 
 
-    <script>
+<!-- ============================== -->
+<!-- VISITAS Y LIKES -->
+<!-- ============================== -->
 
-        const words =
-            document.querySelectorAll(".word");
-
-
-        words.forEach(word => {
-
-            word.addEventListener("click", () => {
-
-                const translation =
-                    word.dataset.translation;
+<script src="../story.js"></script>
 
 
-                const existingTranslation =
-                    word.nextElementSibling;
+<!-- ============================== -->
+<!-- TRADUCCIONES -->
+<!-- ============================== -->
+
+<script>
+
+    const words =
+        document.querySelectorAll(".word");
 
 
-                // Si ya está abierta,
-                // la cerramos.
+    words.forEach(word => {
 
-                if (
-                    existingTranslation &&
-                    existingTranslation.classList.contains("translation")
-                ) {
+        word.addEventListener("click", () => {
 
-                    existingTranslation.remove();
-
-                    return;
-
-                }
+            const translation =
+                word.dataset.translation;
 
 
-                // Crear traducción
-
-                const translationElement =
-                    document.createElement("span");
+            const existingTranslation =
+                word.nextElementSibling;
 
 
-                translationElement.classList.add(
-                    "translation"
-                );
+            // Si ya está abierta,
+            // la cerramos.
+
+            if (
+                existingTranslation &&
+                existingTranslation.classList.contains("translation")
+            ) {
+
+                existingTranslation.remove();
+
+                return;
+
+            }
 
 
-                translationElement.textContent =
-                    translation;
+            // Crear traducción
+
+            const translationElement =
+                document.createElement("span");
 
 
-                // Mostrar traducción
+            translationElement.classList.add(
+                "translation"
+            );
 
-                word.after(
-                    translationElement
-                );
 
-            });
+            translationElement.textContent =
+                translation;
+
+
+            // Mostrar traducción
+
+            word.after(
+                translationElement
+            );
 
         });
 
-    </script>
+    });
 
+</script>
+```
 
 </body>
 

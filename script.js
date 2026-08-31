@@ -1,4 +1,19 @@
 // ==========================================
+// SUPABASE
+// ==========================================
+
+const SUPABASE_URL = "https://tiseuiykkdmnsxnrwpqi.supabase.co";
+
+const SUPABASE_KEY = "sb_publishable_jsGZSxH8_ydr_R0ToU3lwQ_UcgaHJDj";
+
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+
+// ==========================================
 // IDIOMAS
 // ==========================================
 
@@ -57,46 +72,6 @@ const languages = [
 // ==========================================
 
 const stories = [
-
-    // --------------------------
-    // ESPAÑOL
-    // --------------------------
-
-    {
-        id: "pepito-el-grillo",
-        title: "Pepito el grillo",
-        language: "spanish",
-        languageName: "Spanish",
-        flag: "🇪🇸",
-        level: "A1",
-        creator: "Xavier T.",
-        image: "",
-        link: "Historias/ElViajeDeAnna.html",
-        popularity: 100,
-        date: 5,
-        rating: 4.9
-    },
-
-
-    // --------------------------
-    // CATALAN
-    // --------------------------
-
-    {
-        id: "Bruhhh",
-        title: "Bruhhh",
-        language: "catalan",
-        languageName: "Catalan",
-        flag: "🇦🇩",
-        level: "A1",
-        creator: "Xavier T.",
-        image: "",
-        link: "Historias/ElViajeDeAnna.html",
-        popularity: 100,
-        date: 5,
-        rating: 4.9
-    },
-
 
     // --------------------------
     // ITALIAN
