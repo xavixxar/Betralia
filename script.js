@@ -62,8 +62,11 @@ const languages = [
     {
         id: "spanish",
         name: "Spanish"
+    },
+    {
+        id: "spanish",
+        name: "Spanish"
     }
-
 ];
 
 
@@ -88,6 +91,26 @@ const stories = [
         image: "",
         link: "Historias/Il viaggio d'Anna.html",
         popularity: 75,
+        date: 1,
+        rating: 4.7
+    },
+
+    
+    // --------------------------
+    // CATALAN
+    // --------------------------
+
+    {
+        id: "el-meu-nou-imperi",
+        title: "My new empire - El meu nou imperi",
+        language: "catalan",
+        languageName: "Catalan",
+        flag: "🇮🇹",
+        level: "B1",
+        creator: "Xavier T.",
+        image: "Imagenes/historia catalan 1.png",
+        link: "Historias/El meu imperi.html",
+        popularity: 99,
         date: 1,
         rating: 4.7
     },
