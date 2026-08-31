@@ -578,7 +578,7 @@ if (selectedLevel !== "todos") {
                     b.popularity -
                     a.popularity
             )
-            .slice(0, 4);
+            .slice(0, 3);
 
 
     popular.forEach(story => {
