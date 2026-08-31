@@ -570,7 +570,7 @@ function displayStories() {
                     b.popularity -
                     a.popularity
             )
-            .slice(0, 3);
+            .slice(0, 4);
 
 
     popular.forEach(story => {
@@ -593,7 +593,7 @@ function displayStories() {
                     b.date -
                     a.date
             )
-            .slice(0, 3);
+            .slice(0, 4);
 
 
     recent.forEach(story => {
