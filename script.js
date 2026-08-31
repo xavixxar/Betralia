@@ -190,6 +190,29 @@ const stories = [
 
 ];
 
+// ==========================================
+// ESTADÍSTICAS DE LA WEB
+// ==========================================
+
+const storyCount =
+    document.getElementById("story-count");
+
+const languageCount =
+    document.getElementById("language-count");
+
+if (storyCount) {
+    storyCount.textContent = stories.length;
+}
+
+if (languageCount) {
+    const activeLanguages =
+        new Set(
+            stories.map(story => story.language)
+        );
+
+    languageCount.textContent =
+        activeLanguages.size;
+}
 
 // ==========================================
 // ELEMENTOS HTML
