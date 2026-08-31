@@ -4,17 +4,20 @@
 
 <head>
 
+
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pedro va oû marchi</title>
+<title>El meu nou imperi</title>
 
 <link rel="stylesheet" href="../styles.css">
+
 
 </head>
 
 <body>
+
 
 <main class="story-page">
 
@@ -23,11 +26,11 @@
     <!-- TÍTULO -->
     <!-- ============================== -->
 
-    <h1>Pedro va oû marchi</h1>
+    <h1>El meu nou imperi</h1>
 
 
     <p class="story-info">
-        Normand Cauchoise · A1
+        Català · B1
     </p>
 
 
@@ -70,9 +73,9 @@
 
             <span
                 class="word"
-                data-translation="Pedro goes to the market."
+                data-translation="I have brought peace, freedom, justice and security to my new Empire."
             >
-                Pedro va o marché.
+               Anakin: He portat pau, llibertat, justícia i seguretat al meu nou Imperi.
             </span>
 
         </p>
@@ -82,9 +85,9 @@
 
             <span
                 class="word"
-                data-translation="He wants to buy potatoes, pommes de terre/truques, eggs and onions."
+                data-translation="Your new Empire?"
             >
-                I veut acater des truques, des œufs et des ognons.
+                Obi-Wan: El teu nou Imperi?
             </span>
 
         </p>
@@ -94,13 +97,35 @@
 
             <span
                 class="word"
-                data-translation="For tonight's dinner."
+                data-translation="Don't make me kill you."
             >
-                Por souper anuit.
+                Anakin: No m'obliguis a matar-te.
             </span>
 
         </p>
 
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="Anakin, my allegiance is to the Republic, to democracy!"
+            >
+               Obi-Wan: Anakin, la meva lleialtat és cap a la República, cap a la democràcia!
+            </span>
+
+        </p>
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="If you're not with me, then you are my enemy."
+            >
+               Anakin: Si no estàs amb mi, aleshores ets el meu enemic.
+            </span>
+
+        </p>
 
     </div>
 
@@ -126,23 +151,13 @@
 
 <script>
 
-    const STORY_ID = "pedro-cauchoise";
+    const STORY_ID = "el-meu-nou-imperi";
 
 </script>
-
-
-<!-- ============================== -->
-<!-- SUPABASE -->
-<!-- ============================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="../supabase.js"></script>
-
-
-<!-- ============================== -->
-<!-- VISITAS Y LIKES -->
-<!-- ============================== -->
 
 <script src="../story.js"></script>
 
@@ -160,6 +175,7 @@
     words.forEach(word => {
 
         word.addEventListener("click", () => {
+
 
             const translation =
                 word.dataset.translation;
@@ -210,6 +226,7 @@
     });
 
 </script>
+
 
 </body>
 
