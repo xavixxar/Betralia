@@ -2,30 +2,18 @@
 // ESTADÍSTICAS DE LA HISTORIA
 // ==========================================
 
-
-// ==========================================
-// ELEMENTOS HTML
-// ==========================================
-
-const viewsElement =
-    document.getElementById("views");
-
-const likesElement =
-    document.getElementById("likes");
-
-const likeButton =
-    document.getElementById("like-button");
+const viewsElement = document.getElementById("views");
+const likesElement = document.getElementById("likes");
+const likeButton = document.getElementById("like-button");
 
 
 // ==========================================
-// COMPROBAR QUE TENEMOS STORY_ID
+// COMPROBAR STORY_ID
 // ==========================================
 
 if (typeof STORY_ID === "undefined") {
 
-    console.error(
-        "No se ha encontrado STORY_ID."
-    );
+    console.error("No se ha encontrado STORY_ID.");
 
 }
 
@@ -56,9 +44,6 @@ async function loadStats() {
     }
 
 
-    // Si todavía no existe la historia
-    // en la base de datos
-
     if (!data) {
 
         viewsElement.textContent = "0";
@@ -69,11 +54,8 @@ async function loadStats() {
     }
 
 
-    viewsElement.textContent =
-        data.views;
-
-    likesElement.textContent =
-        data.likes;
+    viewsElement.textContent = data.views;
+    likesElement.textContent = data.likes;
 
 }
 
@@ -84,49 +66,46 @@ async function loadStats() {
 
 async function registerView() {
 
-
-    // Comprobar si ya hemos registrado
-    // una visita recientemente.
-
     const visitKey =
         "visited_" + STORY_ID;
-
 
     const lastVisit =
         localStorage.getItem(visitKey);
 
-
     const now =
         Date.now();
-
 
     const thirtyMinutes =
         30 * 60 * 1000;
 
 
-    // Si visitó esta historia
-    // hace menos de 30 minutos,
-    // no contamos otra visita.
+    // No contar otra visita durante 30 minutos
 
     if (
         lastVisit &&
-        now - Number(lastVisit) <
-        thirtyMinutes
+        now - Number(lastVisit) < thirtyMinutes
     ) {
+
+        console.log("Visita no contada: ya visitada recientemente.");
 
         return;
 
     }
 
 
-    const { error } =
-        await supabaseClient
-            .rpc(
-                "add_story_view",
-                {
-                    p_story_id: STORY_ID
-                }
-            );
+    console.log(
+        "Registrando visita para:",
+        STORY_ID
+    );
+
+
+    const { data, error } =
+        await supabaseClient.rpc(
+            "add_story_view",
+            {
+                p_story_id: STORY_ID
+            }
+        );
 
 
     if (error) {
@@ -141,8 +120,11 @@ async function registerView() {
     }
 
 
-    // Guardar cuándo visitó
-    // esta historia.
+    console.log(
+        "Visita registrada correctamente:",
+        data
+    );
+
 
     localStorage.setItem(
         visitKey,
@@ -150,9 +132,9 @@ async function registerView() {
     );
 
 
-    // Actualizar el contador.
+    // Volver a cargar las estadísticas
 
-    loadStats();
+    await loadStats();
 
 }
 
@@ -166,16 +148,13 @@ function hasLiked() {
     const likeKey =
         "liked_" + STORY_ID;
 
-
-    return localStorage.getItem(
-        likeKey
-    ) === "true";
+    return localStorage.getItem(likeKey) === "true";
 
 }
 
 
 // ==========================================
-// ACTUALIZAR BOTÓN
+// ACTUALIZAR BOTÓN LIKE
 // ==========================================
 
 function updateLikeButton() {
@@ -207,9 +186,6 @@ function updateLikeButton() {
 
 async function likeStory() {
 
-
-    // Evitar múltiples likes
-
     if (hasLiked()) {
 
         return;
@@ -220,14 +196,19 @@ async function likeStory() {
     likeButton.disabled = true;
 
 
-    const { error } =
-        await supabaseClient
-            .rpc(
-                "add_story_like",
-                {
-                    p_story_id: STORY_ID
-                }
-            );
+    console.log(
+        "Dando like a:",
+        STORY_ID
+    );
+
+
+    const { data, error } =
+        await supabaseClient.rpc(
+            "add_story_like",
+            {
+                p_story_id: STORY_ID
+            }
+        );
 
 
     if (error) {
@@ -244,8 +225,11 @@ async function likeStory() {
     }
 
 
-    // Guardar que este navegador
-    // ya ha dado like.
+    console.log(
+        "Like registrado correctamente:",
+        data
+    );
+
 
     const likeKey =
         "liked_" + STORY_ID;
@@ -257,14 +241,10 @@ async function likeStory() {
     );
 
 
-    // Actualizar botón.
-
     updateLikeButton();
 
 
-    // Actualizar contador.
-
-    loadStats();
+    await loadStats();
 
 }
 
@@ -283,8 +263,21 @@ likeButton.addEventListener(
 // INICIAR
 // ==========================================
 
-loadStats();
+async function initStoryStats() {
 
-registerView();
+    console.log(
+        "Inicializando estadísticas de:",
+        STORY_ID
+    );
 
-updateLikeButton();
+
+    await loadStats();
+
+    await registerView();
+
+    updateLikeButton();
+
+}
+
+
+initStoryStats();
