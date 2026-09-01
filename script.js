@@ -63,10 +63,6 @@ const languages = [
         id: "spanish",
         name: "Spanish"
     },
-    {
-        id: "spanish",
-        name: "Spanish"
-    }
 ];
 
 
@@ -75,27 +71,6 @@ const languages = [
 // ==========================================
 
 const stories = [
-
-    // --------------------------
-    // ITALIAN
-    // --------------------------
-
-    {
-        id: "il-viaggio-di-anna",
-        title: "Anna's Travel - Il viaggio d'Anna.",
-        language: "italian",
-        languageName: "Italian",
-        flag: "🇮🇹",
-        level: "A1",
-        creator: "Xavier T.",
-        image: "",
-        link: "Historias/Il viaggio d'Anna.html",
-        popularity: 75,
-        date: 1,
-        rating: 4.7
-    },
-
-    
     // --------------------------
     // CATALAN
     // --------------------------
@@ -210,7 +185,24 @@ const stories = [
         date: 5,
         rating: 4.9
     }
+    // --------------------------
+    // CORSICIAN
+    // --------------------------
 
+    {
+        id: "a-nostra-culazione",
+        title: "Our breakfast - A nostra culazione",
+        language: "corsician",
+        languageName: "Corsician",
+        flag: "🇮🇹",
+        level: "A1",
+        creator: "Xavier T.",
+        image: "Imagenes/historias desayuno.png",
+        link: "Historias/A nostra culazione.html",
+        popularity: 80,
+        date: 1,
+        rating: 4.7
+    },
 ];
 
 // ==========================================
