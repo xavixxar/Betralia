@@ -64,10 +64,6 @@ const languages = [
         name: "Spanish"
     },
     {
-        id: "spanish",
-        name: "Spanish"
-    },
-    {
         id: "corsician",
         name: "Corsician"
     }
