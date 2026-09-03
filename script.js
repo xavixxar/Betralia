@@ -33,7 +33,6 @@ const languages = [
         id: "catalan",
         name: "Catalan"
     },
-    
     {
         id: "menorqui",
         name: "Menorquí (Catalan dialect)"
