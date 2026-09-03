@@ -163,7 +163,7 @@ const stories = [
         languageName: "Alsacian",
         flag: "🇫🇷",
         level: "A1",
-        creator: "",
+        creator: "anonymous",
         image: "Imagenes/historia alsaciano 1.png",
         link: "Historias/Pedro in the market Alsacian.html",
         popularity: 100,
