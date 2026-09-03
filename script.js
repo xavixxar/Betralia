@@ -123,7 +123,7 @@ const stories = [
         languageName: "Normand",
         flag: "🇫🇷",
         level: "A1",
-        creator: "",
+        creator: "ed l'Epte a la Mer",
         image: "Imagenes/historia normando 1.png",
         link: "Historias/Pedro in the market Lechanteur.html",
         popularity: 97,
