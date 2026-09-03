@@ -38,12 +38,6 @@ const languages = [
         id: "english",
         name: "English"
     },
-
-    {
-        id: "italian",
-        name: "Italian"
-    },
-
     {
         id: "menorqui",
         name: "Menorquí (Catalan dialect)"
@@ -53,19 +47,9 @@ const languages = [
         id: "normand",
         name: "Normand"
     },
-
     {
-        id: "portuguese",
-        name: "Portuguese"
-    },
-
-    {
-        id: "spanish",
-        name: "Spanish"
-    },
-    {
-        id: "spanish",
-        name: "Spanish"
+        id: "corsician",
+        name: "Corsician"
     }
 ];
 
@@ -75,26 +59,6 @@ const languages = [
 // ==========================================
 
 const stories = [
-
-    // --------------------------
-    // ITALIAN
-    // --------------------------
-
-    {
-        id: "il-viaggio-di-anna",
-        title: "Anna's Travel - Il viaggio d'Anna.",
-        language: "italian",
-        languageName: "Italian",
-        flag: "🇮🇹",
-        level: "A1",
-        creator: "Xavier T.",
-        image: "",
-        link: "Historias/Il viaggio d'Anna.html",
-        popularity: 75,
-        date: 1,
-        rating: 4.7
-    },
-
     
     // --------------------------
     // CATALAN
@@ -197,8 +161,8 @@ const stories = [
     // --------------------------
 
     {
-        id: "pedro-geht-am-marik",
-        title: "Pedro goes to the market - Pedro geht am Märik",
+        id: "pedro-geht-uf-de-marik",
+        title: "Pedro goes to the market - Pedro geht ùf de Märik",
         language: "alsacian",
         languageName: "Alsacian",
         flag: "🇫🇷",
@@ -209,7 +173,27 @@ const stories = [
         popularity: 100,
         date: 5,
         rating: 4.9
-    }
+    },
+
+    // --------------------------
+    // CORSICIAN
+    // --------------------------
+
+    {
+        id: "a-nostra-culazione",
+        title: "Our breakfast - A nostra culazione",
+        language: "corsician",
+        languageName: "Corsician",
+        flag: "🇮🇹",
+        level: "A1",
+        creator: "Xavier T.",
+        image: "Imagenes/historias desayuno.png",
+        link: "Historias/A nostra culazione.html",
+        popularity: 80,
+        date: 1,
+        rating: 4.7
+    },
+
 
 ];
 
